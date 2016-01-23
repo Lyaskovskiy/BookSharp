@@ -15,7 +15,7 @@ namespace КурсоваБД
             {
                 try
                 {
-                    if (s1 == "Guest" && s2 == "") {Guest f5=new Guest(); f5.ShowDialog(); }
+                    if ((s1 == "Guest" || s1 == "") && s2 == "") {Guest f5=new Guest(); f5.ShowDialog(); }
                     else
                     {
                         MySqlDataReader myreader;

@@ -23,7 +23,7 @@ namespace КурсоваБД
         void comboWho()
         {
             string s1 = "datasource=localhost;port=3306;username=root;password=ttt";
-            string s2 = "select Kind_of_work,Experience,Password,Email,Trolleybus_idTrolleybus,Trolleybus_Route_Number from cursovaBD.Worker where Name='"+label1.Text.ToString()+"';";
+            string s2 = "select Kind_of_work,Experience,Password,Email,Trolleybus_idTrolleybus,Trolleybus_Route_Number from cursova.Worker where Name='"+label1.Text.ToString()+"';";
             MySqlConnection connn = new MySqlConnection(s1);
             MySqlCommand c = new MySqlCommand(s2, connn);
             MySqlDataReader myreader;
@@ -109,7 +109,7 @@ namespace КурсоваБД
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            string query2 = "update cursovaBD.Worker set Password='"
+            string query2 = "update cursova.Worker set Password='"
          + textBox2.Text.ToString() + "',Email='" + textBox3.Text.ToString() + "' where Name='" + label1.Text.ToString() + "';";
             Func.AddFunc(query2);
         }
