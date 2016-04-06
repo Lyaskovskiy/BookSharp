@@ -40,6 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -50,8 +52,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.body = new System.Windows.Forms.RichTextBox();
+            this.send = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.from = new System.Windows.Forms.TextBox();
+            this.to = new System.Windows.Forms.TextBox();
+            this.subject = new System.Windows.Forms.TextBox();
+            this.smtp = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,20 +99,35 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.password);
+            this.tabPage1.Controls.Add(this.username);
+            this.tabPage1.Controls.Add(this.smtp);
+            this.tabPage1.Controls.Add(this.subject);
+            this.tabPage1.Controls.Add(this.to);
+            this.tabPage1.Controls.Add(this.from);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.send);
+            this.tabPage1.Controls.Add(this.body);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.dataGridView2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(506, 326);
+            this.tabPage1.Size = new System.Drawing.Size(506, 354);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Table";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(266, 16);
+            this.label5.Location = new System.Drawing.Point(11, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 13);
             this.label5.TabIndex = 5;
@@ -110,7 +139,7 @@
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(6, 78);
+            this.groupBox1.Location = new System.Drawing.Point(6, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(169, 142);
             this.groupBox1.TabIndex = 5;
@@ -153,9 +182,9 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(181, 32);
+            this.dataGridView2.Location = new System.Drawing.Point(6, 205);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(315, 273);
+            this.dataGridView2.Size = new System.Drawing.Size(169, 119);
             this.dataGridView2.TabIndex = 0;
             // 
             // tabPage2
@@ -181,6 +210,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Information";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(38, 324);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(463, 20);
+            this.textBox4.TabIndex = 19;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(2, 329);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Notes:";
             // 
             // textBox1
             // 
@@ -276,21 +321,119 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label6
+            // body
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 329);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Notes:";
+            this.body.Location = new System.Drawing.Point(199, 32);
+            this.body.Name = "body";
+            this.body.Size = new System.Drawing.Size(297, 142);
+            this.body.TabIndex = 6;
+            this.body.Text = "";
             // 
-            // textBox4
+            // send
             // 
-            this.textBox4.Location = new System.Drawing.Point(38, 324);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(463, 20);
-            this.textBox4.TabIndex = 19;
+            this.send.Location = new System.Drawing.Point(199, 189);
+            this.send.Name = "send";
+            this.send.Size = new System.Drawing.Size(87, 28);
+            this.send.TabIndex = 7;
+            this.send.Text = "button1";
+            this.send.UseVisualStyleBackColor = true;
+            this.send.Click += new System.EventHandler(this.send_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(304, 189);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "From";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(304, 216);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "To";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(304, 242);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Subject";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(304, 270);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Stmp Server";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(304, 296);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Usernane";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(304, 323);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 13);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Password";
+            // 
+            // from
+            // 
+            this.from.Location = new System.Drawing.Point(369, 183);
+            this.from.Name = "from";
+            this.from.Size = new System.Drawing.Size(100, 20);
+            this.from.TabIndex = 14;
+            // 
+            // to
+            // 
+            this.to.Location = new System.Drawing.Point(369, 212);
+            this.to.Name = "to";
+            this.to.Size = new System.Drawing.Size(100, 20);
+            this.to.TabIndex = 15;
+            // 
+            // subject
+            // 
+            this.subject.Location = new System.Drawing.Point(369, 238);
+            this.subject.Name = "subject";
+            this.subject.Size = new System.Drawing.Size(100, 20);
+            this.subject.TabIndex = 16;
+            // 
+            // smtp
+            // 
+            this.smtp.Location = new System.Drawing.Point(369, 266);
+            this.smtp.Name = "smtp";
+            this.smtp.Size = new System.Drawing.Size(100, 20);
+            this.smtp.TabIndex = 17;
+            // 
+            // username
+            // 
+            this.username.Location = new System.Drawing.Point(369, 292);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(100, 20);
+            this.username.TabIndex = 18;
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(369, 319);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(100, 20);
+            this.password.TabIndex = 19;
             // 
             // Mechanic
             // 
@@ -341,6 +484,20 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox smtp;
+        private System.Windows.Forms.TextBox subject;
+        private System.Windows.Forms.TextBox to;
+        private System.Windows.Forms.TextBox from;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button send;
+        private System.Windows.Forms.RichTextBox body;
 
     }
 }

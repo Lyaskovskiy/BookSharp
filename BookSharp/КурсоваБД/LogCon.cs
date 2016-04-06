@@ -15,7 +15,7 @@ namespace КурсоваБД
             {
                 try
                 {
-                    if ((s1 == "Guest" || s1 == "") && s2 == "") {Guest f5=new Guest(); f5.ShowDialog(); }
+                    if (s1 == "Guest" && s2 == "") {Guest f5=new Guest(); f5.ShowDialog(); }
                     else
                     {
                         MySqlDataReader myreader;
@@ -49,8 +49,12 @@ namespace КурсоваБД
                 }
                 catch (Exception e)
                 {
+                     
+                     MessageBox.Show("Продовжити?");
                      connn.Close();
-                     MessageBox.Show("Main^"+e.Message);
+                     //tran.Rollback();
+                     Manager f3 = new Manager();
+                     f3.ShowDialog();
                 }
             
             }

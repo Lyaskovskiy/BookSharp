@@ -13,9 +13,10 @@ namespace КурсоваБД
 {
     public partial class NewUser : Form
     {
-        public NewUser()
+        public NewUser(string strAdm)
         {
             InitializeComponent();
+            label5.Text = strAdm;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,7 +26,11 @@ namespace КурсоваБД
 
         private void NewUser_Load(object sender, EventArgs e)
         {
-
+            label5.Visible = false;
+            if (label5.Text.ToString() == "admin") {
+                textBox1.Enabled = true;
+                textBox4.Enabled = true;
+            };
         }    
     }
 }

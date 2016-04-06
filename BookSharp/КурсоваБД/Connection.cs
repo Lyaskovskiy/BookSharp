@@ -52,10 +52,11 @@ namespace КурсоваБД
 
                tran.Commit(); //підтвердження транзакції
                connn.Close();  //закриття зєднання
-               MessageBox.Show("Saved");    //повідомлення про успішне виконання
+              // MessageBox.Show("Saved");    //повідомлення про успішне виконання
+
            }
                //прехоплення помилки, закриття зєднання, відміна транзакції
-           catch (Exception ex) { MessageBox.Show("You duplicate route"); connn.Close(); tran.Rollback(); 
+           catch (MySql.Data.MySqlClient.MySqlException ex) { MessageBox.Show("Така книга вже зареєстрована"); connn.Close(); tran.Rollback();
            }
       }
 

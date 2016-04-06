@@ -57,11 +57,11 @@ namespace КурсоваБД
         private void Menu_Load(object sender, EventArgs e)
         {
             comboWho();
-            if (label8.Text.ToString() == "Manager") { button2.Enabled = false; button3.Enabled = false; textBox4.Visible = false; textBox5.Visible = false; linkLabel1.Visible = false; button5.Visible = false; }
+            if (label8.Text.ToString() == "manager") { button2.Enabled = false; button3.Enabled = false; textBox4.Visible = false; textBox5.Visible = false; linkLabel1.Visible = false; button5.Visible = false; }
             if (label8.Text.ToString() == "Dispatcher") { button1.Enabled = false; button3.Enabled = false; textBox4.Visible = false; textBox5.Visible = false; linkLabel1.Visible = false; button5.Visible = false; }
             if (label8.Text.ToString() == "Mechanic") { button2.Enabled = false; button1.Enabled = false; textBox4.Visible = false; textBox5.Visible = false; linkLabel1.Visible = false; button5.Visible = false; }
-            if (label8.Text.ToString() == "Driver") { button1.Enabled = false; button2.Enabled = false; button3.Enabled = false; linkLabel1.Visible = false; button5.Visible = false; }
-            if (label8.Text.ToString() == "Administrator") { textBox4.Visible = false; textBox5.Visible = false; }
+            if (label8.Text.ToString() == "driver" || label8.Text.ToString() == "") { button1.Enabled = false; button2.Enabled = false; button3.Enabled = false; linkLabel1.Visible = false; button5.Visible = false; }
+            if (label8.Text.ToString() == "admin") { textBox4.Visible = false; textBox5.Visible = false; }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,21 +109,30 @@ namespace КурсоваБД
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            string query2 = "update cursova.Worker set Password='"
+            string query2 = "update cursovaBD.Worker set Password='"
          + textBox2.Text.ToString() + "',Email='" + textBox3.Text.ToString() + "' where Name='" + label1.Text.ToString() + "';";
             Func.AddFunc(query2);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            NewUser f3 = new NewUser();
-            f3.ShowDialog();
+            
+                string strAdm = "admin"; 
+                NewUser f3 = new NewUser(strAdm);
+                f3.ShowDialog();
+            
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Administrator f3 = new Administrator();
             f3.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

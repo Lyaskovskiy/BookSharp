@@ -61,5 +61,11 @@ namespace КурсоваБД
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            NewUser f3 = new NewUser("");
+            f3.ShowDialog();
+        }
     }
 }

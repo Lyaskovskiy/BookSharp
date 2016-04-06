@@ -19,7 +19,6 @@ C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\obj\Rel
 C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\obj\Release\КурсоваБД.pdb
 C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\bin\Release\КурсоваБД.exe
 C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\bin\Release\КурсоваБД.pdb
-C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\obj\Release\КурсоваБД.csprojResolveAssemblyReference.cache
 C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Administrator.resources
 C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Guest.resources
 C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Login.resources
@@ -33,16 +32,4 @@ C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\obj\Rel
 C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\bin\Release\КурсоваБД.exe.config
 C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.exe
 C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.pdb
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\bin\Release\КурсоваБД.exe
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\bin\Release\КурсоваБД.pdb
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.csprojResolveAssemblyReference.cache
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Administrator.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Guest.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Login.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Manager.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Mechanic.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Menu.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.NewUser.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Dispatcher.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.Properties.Resources.resources
-C:\My documents\GitHub\BookSharp\BookSharp\КурсоваБД\obj\Release\КурсоваБД.csproj.GenerateResource.Cache
+C:\My documents\Visual Studio 2012\Projects\BookSharp\КурсоваБД\obj\Release\КурсоваБД.csprojResolveAssemblyReference.cache

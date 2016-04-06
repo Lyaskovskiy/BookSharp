@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
 
+using System.Web;
+using System.Net.Mail;
+
 namespace КурсоваБД
 {
     public partial class Mechanic : Form
@@ -19,6 +22,8 @@ namespace КурсоваБД
             InitializeComponent();
             timer1.Start();
             comboDate(); //вивід наступної дати техогляду
+
+            password.PasswordChar = '*';
         }
 
         //функція підрахунку кількості тролейбусів з технічним станом "Bad"
@@ -179,6 +184,22 @@ namespace КурсоваБД
         {
             DateTime time = DateTime.Now;
             textBox2.Text = time.ToString();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void send_Click(object sender, EventArgs e)
+        {
+            MailMessage mail = new MailMessage(from.Text, to.Text, subject.Text, body.Text);
+            SmtpClient client = new SmtpClient(smtp.Text);
+            client.Port = 587;
+            client.Credentials = new System.Net.NetworkCredential(username.Text, password.Text);
+            client.EnableSsl = true;
+            client.Send(mail);
+            MessageBox.Show("Email sent", "Success", MessageBoxButtons.OK);
         }
     }
 }
