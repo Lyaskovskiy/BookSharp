@@ -194,12 +194,23 @@ namespace КурсоваБД
         private void send_Click(object sender, EventArgs e)
         {
             MailMessage mail = new MailMessage(from.Text, to.Text, subject.Text, body.Text);
+            mail.Attachments.Add(new Attachment(attach.Text));
             SmtpClient client = new SmtpClient(smtp.Text);
             client.Port = 587;
             client.Credentials = new System.Net.NetworkCredential(username.Text, password.Text);
             client.EnableSsl = true;
             client.Send(mail);
             MessageBox.Show("Email sent", "Success", MessageBoxButtons.OK);
+        }
+
+        private void attachBut_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dl = new OpenFileDialog();
+            if (dl.ShowDialog() == DialogResult.OK)
+            {
+                string picPath = dl.FileName.ToString();
+                attach.Text = picPath;
+            }
         }
     }
 }

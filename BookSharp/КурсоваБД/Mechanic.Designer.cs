@@ -66,6 +66,8 @@
             this.smtp = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
+            this.attach = new System.Windows.Forms.TextBox();
+            this.attachBut = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -99,6 +101,8 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.attachBut);
+            this.tabPage1.Controls.Add(this.attach);
             this.tabPage1.Controls.Add(this.password);
             this.tabPage1.Controls.Add(this.username);
             this.tabPage1.Controls.Add(this.smtp);
@@ -331,18 +335,18 @@
             // 
             // send
             // 
-            this.send.Location = new System.Drawing.Point(199, 189);
+            this.send.Location = new System.Drawing.Point(199, 308);
             this.send.Name = "send";
-            this.send.Size = new System.Drawing.Size(87, 28);
+            this.send.Size = new System.Drawing.Size(99, 28);
             this.send.TabIndex = 7;
-            this.send.Text = "button1";
+            this.send.Text = "Send message";
             this.send.UseVisualStyleBackColor = true;
             this.send.Click += new System.EventHandler(this.send_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(304, 189);
+            this.label7.Location = new System.Drawing.Point(328, 189);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
             this.label7.TabIndex = 8;
@@ -351,7 +355,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(304, 216);
+            this.label8.Location = new System.Drawing.Point(328, 216);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(20, 13);
             this.label8.TabIndex = 9;
@@ -360,7 +364,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(304, 242);
+            this.label9.Location = new System.Drawing.Point(328, 242);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 10;
@@ -369,16 +373,16 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(304, 270);
+            this.label10.Location = new System.Drawing.Point(328, 270);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 13);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Stmp Server";
+            this.label10.Text = "Smtp Server";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(304, 296);
+            this.label11.Location = new System.Drawing.Point(328, 296);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 12;
@@ -387,7 +391,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(304, 323);
+            this.label12.Location = new System.Drawing.Point(328, 323);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 13);
             this.label12.TabIndex = 13;
@@ -395,45 +399,62 @@
             // 
             // from
             // 
-            this.from.Location = new System.Drawing.Point(369, 183);
+            this.from.Location = new System.Drawing.Point(393, 183);
             this.from.Name = "from";
             this.from.Size = new System.Drawing.Size(100, 20);
             this.from.TabIndex = 14;
             // 
             // to
             // 
-            this.to.Location = new System.Drawing.Point(369, 212);
+            this.to.Location = new System.Drawing.Point(393, 212);
             this.to.Name = "to";
             this.to.Size = new System.Drawing.Size(100, 20);
             this.to.TabIndex = 15;
             // 
             // subject
             // 
-            this.subject.Location = new System.Drawing.Point(369, 238);
+            this.subject.Location = new System.Drawing.Point(393, 238);
             this.subject.Name = "subject";
             this.subject.Size = new System.Drawing.Size(100, 20);
             this.subject.TabIndex = 16;
             // 
             // smtp
             // 
-            this.smtp.Location = new System.Drawing.Point(369, 266);
+            this.smtp.Location = new System.Drawing.Point(393, 266);
             this.smtp.Name = "smtp";
             this.smtp.Size = new System.Drawing.Size(100, 20);
             this.smtp.TabIndex = 17;
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(369, 292);
+            this.username.Location = new System.Drawing.Point(393, 292);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(100, 20);
             this.username.TabIndex = 18;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(369, 319);
+            this.password.Location = new System.Drawing.Point(393, 319);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(100, 20);
             this.password.TabIndex = 19;
+            // 
+            // attach
+            // 
+            this.attach.Location = new System.Drawing.Point(198, 210);
+            this.attach.Name = "attach";
+            this.attach.Size = new System.Drawing.Size(100, 20);
+            this.attach.TabIndex = 20;
+            // 
+            // attachBut
+            // 
+            this.attachBut.Location = new System.Drawing.Point(199, 185);
+            this.attachBut.Name = "attachBut";
+            this.attachBut.Size = new System.Drawing.Size(75, 20);
+            this.attachBut.TabIndex = 22;
+            this.attachBut.Text = "Attach";
+            this.attachBut.UseVisualStyleBackColor = true;
+            this.attachBut.Click += new System.EventHandler(this.attachBut_Click);
             // 
             // Mechanic
             // 
@@ -498,6 +519,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button send;
         private System.Windows.Forms.RichTextBox body;
+        private System.Windows.Forms.TextBox attach;
+        private System.Windows.Forms.Button attachBut;
 
     }
 }

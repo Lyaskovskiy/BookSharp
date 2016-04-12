@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace КурсоваБД
 {
@@ -21,18 +22,39 @@ namespace КурсоваБД
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.ToString() == "") {
-                string query = "select Name,Kind_of_work,Experience,Email from cursova.worker where Kind_of_work='';";
+                string query = "select Name,Kind_of_work,Experience,Email,Age from cursova.worker where Kind_of_work='';";
                 Func.SelectFunc(query, dataGridView1);
             }
-            string query1 = "select Name,Kind_of_work,Experience,Email from cursova.worker where Name like '%" + textBox1.Text.ToString() + "%';";
+            string query1 = "select Name,Kind_of_work,Experience,Email,Age from cursova.worker where Name like '%" + textBox1.Text.ToString() + "%';";
             Func.SelectFunc(query1, dataGridView1);
         }
 
         //вивід всіх працівників 
         private void button2_Click(object sender, EventArgs e)
         {
-            string query = "select Name,Kind_of_work,Experience,Email from cursova.worker where Kind_of_work='driver' or Kind_of_work='manager';";
+            string query = "select Name,Kind_of_work,Experience,Email,Age from cursova.worker where Kind_of_work='driver' or Kind_of_work='manager';";
             Func.SelectFunc(query, dataGridView1);
+
+            MySqlConnection connn = new MySqlConnection("datasource=localhost;port=3306;username=root;password=ttt");
+            MySqlCommand comand = new MySqlCommand("select * from cursova.worker;",connn);
+            MySqlDataReader myreader;
+            try 
+            {
+                connn.Open();
+                myreader = comand.ExecuteReader();
+
+                while (myreader.Read()) {
+                    this.chart1.Series["Age"].Points.AddXY(myreader.GetString("name"), myreader.GetInt32("Age"));
+                    this.chart1.Series["Experience"].Points.AddXY(myreader.GetString("name"), myreader.GetInt32("Experience"));
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
+        
         }
 
         //видалення вибраного працівника
@@ -58,6 +80,11 @@ namespace КурсоваБД
         {
             string query1 = "update cursova.worker set Kind_of_work='" + dataGridView1.CurrentRow.Cells[1].Value.ToString() + "',Experience='" + dataGridView1.CurrentRow.Cells[2].Value.ToString() + "'where Name='" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "';";
             Func.AddFunc(query1);
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

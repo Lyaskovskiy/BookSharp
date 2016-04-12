@@ -37,10 +37,22 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textLocalIP = new System.Windows.Forms.TextBox();
+            this.textLocalPort = new System.Windows.Forms.TextBox();
+            this.textFriendIP = new System.Windows.Forms.TextBox();
+            this.textFriendPort = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -142,11 +154,102 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Assign";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textLocalPort);
+            this.groupBox2.Controls.Add(this.textLocalIP);
+            this.groupBox2.Location = new System.Drawing.Point(36, 166);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textFriendPort);
+            this.groupBox3.Controls.Add(this.textFriendIP);
+            this.groupBox3.Location = new System.Drawing.Point(361, 166);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // textLocalIP
+            // 
+            this.textLocalIP.Location = new System.Drawing.Point(80, 29);
+            this.textLocalIP.Name = "textLocalIP";
+            this.textLocalIP.Size = new System.Drawing.Size(94, 20);
+            this.textLocalIP.TabIndex = 0;
+            // 
+            // textLocalPort
+            // 
+            this.textLocalPort.Location = new System.Drawing.Point(80, 64);
+            this.textLocalPort.Name = "textLocalPort";
+            this.textLocalPort.Size = new System.Drawing.Size(94, 20);
+            this.textLocalPort.TabIndex = 1;
+            // 
+            // textFriendIP
+            // 
+            this.textFriendIP.Location = new System.Drawing.Point(80, 29);
+            this.textFriendIP.Name = "textFriendIP";
+            this.textFriendIP.Size = new System.Drawing.Size(94, 20);
+            this.textFriendIP.TabIndex = 0;
+            // 
+            // textFriendPort
+            // 
+            this.textFriendPort.Location = new System.Drawing.Point(80, 64);
+            this.textFriendPort.Name = "textFriendPort";
+            this.textFriendPort.Size = new System.Drawing.Size(94, 20);
+            this.textFriendPort.TabIndex = 1;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(594, 170);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(176, 147);
+            this.listBox1.TabIndex = 19;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(253, 210);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(460, 304);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 21;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(49, 304);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(351, 20);
+            this.textBox1.TabIndex = 22;
+            // 
             // Dispatcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 165);
+            this.ClientSize = new System.Drawing.Size(781, 328);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView3);
@@ -161,6 +264,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +284,16 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textLocalPort;
+        private System.Windows.Forms.TextBox textLocalIP;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textFriendPort;
+        private System.Windows.Forms.TextBox textFriendIP;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox1;
 
     }
 }
