@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="КурсоваБД.Administrator" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAABAAAAKAAAISAEg4AAAAEHAIAAAAAAA=</HashCode>
+      <FileName>Administrator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Connection" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Connection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="КурсоваБД.Func">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Connection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Management" Collapsed="true">
+    <Position X="4.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BRAQAA0AACAAAgAAAACAAAQSAsBAAAAAECEMAAAAAAA=</HashCode>
+      <FileName>Management.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Guest" Collapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAIAQAACAxABEQQASgCAASANw7ABIAkHAPQABgAAA=</HashCode>
+      <FileName>Guest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.LogCon">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>LogCon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Login" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAIAQAACAAABAAAASACAASAAAoAAgAEAQAAABAAAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Seller" Collapsed="true">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAQAACAoABQSoACACAACAEA6AAAAEGAZAAAAgAI=</HashCode>
+      <FileName>Seller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Talking" Collapsed="true">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cCSAAAYABCAAUBASAASAAAmCAQAYIACAAEAAIgABBAA=</HashCode>
+      <FileName>Talking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Menu" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAQBACAAABQAAACAAAhSAMA4QAgAAHAMQAAAAAA=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.NewOrder" Collapsed="true">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAASAAABAAAACAAABCIAAIAAAAEEAQAAAAAAA=</HashCode>
+      <FileName>NewOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.NewUser" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABCAAACAEABCIAAIAAAAEEAAAAAAAAA=</HashCode>
+      <FileName>NewUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Program" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Properties.Resources" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAABEAAAAUAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="КурсоваБД.Properties.Settings" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
