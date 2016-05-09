@@ -73,6 +73,16 @@ namespace КурсоваБД.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Library_Books {
+            get {
+                object obj = ResourceManager.GetObject("Library-Books", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap зел {
             get {
                 object obj = ResourceManager.GetObject("зел", resourceCulture);

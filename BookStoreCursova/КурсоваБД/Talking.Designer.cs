@@ -62,92 +62,100 @@
             // 
             this.groupBox2.Controls.Add(this.textLocalPort);
             this.groupBox2.Controls.Add(this.textLocalIP);
-            this.groupBox2.Location = new System.Drawing.Point(11, 22);
+            this.groupBox2.Enabled = false;
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.Location = new System.Drawing.Point(11, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.Size = new System.Drawing.Size(200, 108);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Ви";
             // 
             // textLocalPort
             // 
-            this.textLocalPort.Location = new System.Drawing.Point(80, 64);
+            this.textLocalPort.Enabled = false;
+            this.textLocalPort.Location = new System.Drawing.Point(80, 69);
             this.textLocalPort.Name = "textLocalPort";
-            this.textLocalPort.Size = new System.Drawing.Size(94, 20);
+            this.textLocalPort.Size = new System.Drawing.Size(94, 19);
             this.textLocalPort.TabIndex = 1;
+            this.textLocalPort.Text = "81";
             // 
             // textLocalIP
             // 
-            this.textLocalIP.Location = new System.Drawing.Point(80, 29);
+            this.textLocalIP.Location = new System.Drawing.Point(80, 31);
             this.textLocalIP.Name = "textLocalIP";
-            this.textLocalIP.Size = new System.Drawing.Size(94, 20);
+            this.textLocalIP.Size = new System.Drawing.Size(94, 19);
             this.textLocalIP.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textFriendPort);
             this.groupBox3.Controls.Add(this.textFriendIP);
-            this.groupBox3.Location = new System.Drawing.Point(11, 183);
+            this.groupBox3.Enabled = false;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox3.Location = new System.Drawing.Point(11, 197);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.Size = new System.Drawing.Size(200, 108);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Клієнт";
             // 
             // textFriendPort
             // 
-            this.textFriendPort.Location = new System.Drawing.Point(80, 64);
+            this.textFriendPort.Location = new System.Drawing.Point(80, 69);
             this.textFriendPort.Name = "textFriendPort";
-            this.textFriendPort.Size = new System.Drawing.Size(94, 20);
+            this.textFriendPort.Size = new System.Drawing.Size(94, 19);
             this.textFriendPort.TabIndex = 1;
+            this.textFriendPort.Text = "80";
             // 
             // textFriendIP
             // 
-            this.textFriendIP.Location = new System.Drawing.Point(80, 29);
+            this.textFriendIP.Location = new System.Drawing.Point(80, 31);
             this.textFriendIP.Name = "textFriendIP";
-            this.textFriendIP.Size = new System.Drawing.Size(94, 20);
+            this.textFriendIP.Size = new System.Drawing.Size(94, 19);
             this.textFriendIP.TabIndex = 0;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(228, 17);
+            this.listBox1.ItemHeight = 14;
+            this.listBox1.Location = new System.Drawing.Point(228, 18);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(176, 121);
+            this.listBox1.Size = new System.Drawing.Size(176, 130);
             this.listBox1.TabIndex = 19;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(277, 209);
+            this.button4.Location = new System.Drawing.Point(277, 225);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(75, 25);
             this.button4.TabIndex = 20;
-            this.button4.Text = "button4";
+            this.button4.Text = "З\'єднання";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(277, 244);
+            this.button5.Location = new System.Drawing.Point(277, 263);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(75, 25);
             this.button5.TabIndex = 21;
-            this.button5.Text = "button5";
+            this.button5.Text = "Відправити";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(11, 157);
+            this.textBox1.Location = new System.Drawing.Point(11, 169);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(393, 20);
+            this.textBox1.Size = new System.Drawing.Size(393, 19);
             this.textBox1.TabIndex = 22;
             // 
             // attachBut
             // 
-            this.attachBut.Location = new System.Drawing.Point(423, 165);
+            this.attachBut.Location = new System.Drawing.Point(423, 178);
             this.attachBut.Name = "attachBut";
-            this.attachBut.Size = new System.Drawing.Size(99, 25);
+            this.attachBut.Size = new System.Drawing.Size(99, 27);
             this.attachBut.TabIndex = 38;
             this.attachBut.Text = "Прикріпити файл";
             this.attachBut.UseVisualStyleBackColor = true;
@@ -155,113 +163,122 @@
             // 
             // attach
             // 
-            this.attach.Location = new System.Drawing.Point(422, 195);
+            this.attach.Location = new System.Drawing.Point(422, 210);
             this.attach.Name = "attach";
-            this.attach.Size = new System.Drawing.Size(100, 20);
+            this.attach.Size = new System.Drawing.Size(100, 19);
             this.attach.TabIndex = 37;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(617, 304);
+            this.password.Location = new System.Drawing.Point(617, 327);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(100, 20);
+            this.password.Size = new System.Drawing.Size(100, 19);
             this.password.TabIndex = 36;
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(617, 277);
+            this.username.Location = new System.Drawing.Point(617, 298);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(100, 20);
+            this.username.Size = new System.Drawing.Size(100, 19);
             this.username.TabIndex = 35;
             // 
             // smtp
             // 
-            this.smtp.Location = new System.Drawing.Point(617, 251);
+            this.smtp.Enabled = false;
+            this.smtp.Location = new System.Drawing.Point(617, 270);
             this.smtp.Name = "smtp";
-            this.smtp.Size = new System.Drawing.Size(100, 20);
+            this.smtp.Size = new System.Drawing.Size(100, 19);
             this.smtp.TabIndex = 34;
             this.smtp.Text = "smtp.gmail.com";
             // 
             // subject
             // 
-            this.subject.Location = new System.Drawing.Point(617, 223);
+            this.subject.Location = new System.Drawing.Point(617, 240);
             this.subject.Name = "subject";
-            this.subject.Size = new System.Drawing.Size(100, 20);
+            this.subject.Size = new System.Drawing.Size(100, 19);
             this.subject.TabIndex = 33;
             // 
             // to
             // 
-            this.to.Location = new System.Drawing.Point(617, 197);
+            this.to.Location = new System.Drawing.Point(617, 212);
             this.to.Name = "to";
-            this.to.Size = new System.Drawing.Size(100, 20);
+            this.to.Size = new System.Drawing.Size(100, 19);
             this.to.TabIndex = 32;
             // 
             // from
             // 
-            this.from.Location = new System.Drawing.Point(617, 168);
+            this.from.Enabled = false;
+            this.from.Location = new System.Drawing.Point(617, 181);
             this.from.Name = "from";
-            this.from.Size = new System.Drawing.Size(100, 20);
+            this.from.Size = new System.Drawing.Size(100, 19);
             this.from.TabIndex = 31;
+            this.from.Text = "burevisnyk88@gmail.com";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(552, 308);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(552, 332);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.Size = new System.Drawing.Size(45, 14);
             this.label12.TabIndex = 30;
             this.label12.Text = "Пароль";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(552, 281);
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(552, 303);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 13);
+            this.label11.Size = new System.Drawing.Size(93, 14);
             this.label11.TabIndex = 29;
             this.label11.Text = "Ім\'я користувача";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(552, 255);
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(552, 275);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 13);
+            this.label10.Size = new System.Drawing.Size(68, 14);
             this.label10.TabIndex = 28;
             this.label10.Text = "Smtp сервер";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(552, 227);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(552, 244);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.Size = new System.Drawing.Size(34, 14);
             this.label9.TabIndex = 27;
             this.label9.Text = "Тема";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(552, 201);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(552, 216);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 13);
+            this.label8.Size = new System.Drawing.Size(22, 14);
             this.label8.TabIndex = 26;
             this.label8.Text = "До";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(552, 174);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(552, 187);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 13);
+            this.label7.Size = new System.Drawing.Size(22, 14);
             this.label7.TabIndex = 25;
             this.label7.Text = "Від";
             // 
             // send
             // 
-            this.send.Location = new System.Drawing.Point(423, 281);
+            this.send.Location = new System.Drawing.Point(423, 303);
             this.send.Name = "send";
-            this.send.Size = new System.Drawing.Size(99, 40);
+            this.send.Size = new System.Drawing.Size(99, 43);
             this.send.TabIndex = 24;
             this.send.Text = "Відіслати поідомлення";
             this.send.UseVisualStyleBackColor = true;
@@ -269,17 +286,18 @@
             // 
             // body
             // 
-            this.body.Location = new System.Drawing.Point(423, 17);
+            this.body.Location = new System.Drawing.Point(423, 18);
             this.body.Name = "body";
-            this.body.Size = new System.Drawing.Size(297, 142);
+            this.body.Size = new System.Drawing.Size(297, 153);
             this.body.TabIndex = 23;
             this.body.Text = "";
             // 
             // Talking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 342);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(754, 368);
             this.Controls.Add(this.attachBut);
             this.Controls.Add(this.attach);
             this.Controls.Add(this.password);
@@ -303,6 +321,8 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Cursor = System.Windows.Forms.Cursors.NoMoveVert;
+            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Talking";
             this.Load += new System.EventHandler(this.Jobs_Load);

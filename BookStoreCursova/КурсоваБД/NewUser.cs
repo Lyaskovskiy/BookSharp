@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using System.Text.RegularExpressions;
 namespace КурсоваБД
 {
     public partial class NewUser : Form
@@ -21,7 +21,25 @@ namespace КурсоваБД
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LogCon.AddUser(this.textBox1.Text.ToString(), this.textBox2.Text.ToString(), this.textBox3.Text.ToString(), this.textBox4.Text.ToString(), this.textBox6.Text.ToString());
+           /* Regex rx1 = new Regex("^[a-zA-Z0-9]{1,20}$");
+            if (!rx1.IsMatch(textBox6.Text))
+            {
+                MessageBox.Show("Імя користувача має містити хоча б один символ");
+            }
+            else
+            {
+                LogCon.AddUser(this.textBox1.Text.ToString(), this.textBox2.Text.ToString(), this.textBox3.Text.ToString(), this.textBox4.Text.ToString(), this.textBox6.Text.ToString());
+            }*/
+
+            Regex rx2 = new Regex("^[a-zA-Z0-9]{1,20}@[a-zA-Z0-9]{1-20}.[a-zA-Z]{2,3}$");
+            if (!rx2.IsMatch(textBox6.Text))
+            {
+                MessageBox.Show("Е-мейл містить не коректний формат!"); 
+            }
+            else 
+            {
+                LogCon.AddUser(this.textBox1.Text.ToString(), this.textBox2.Text.ToString(), this.textBox3.Text.ToString(), this.textBox4.Text.ToString(), this.textBox6.Text.ToString());
+            }
         }
 
         private void NewUser_Load(object sender, EventArgs e)

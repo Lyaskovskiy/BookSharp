@@ -15,3 +15,5 @@ C:\My documents\Visual Studio 2012\Projects\BookStoreCursova\КурсоваБД\
 C:\My documents\Visual Studio 2012\Projects\BookStoreCursova\КурсоваБД\obj\Release\КурсоваБД.Seller.resources
 C:\My documents\Visual Studio 2012\Projects\BookStoreCursova\КурсоваБД\obj\Release\КурсоваБД.Talking.resources
 C:\My documents\Visual Studio 2012\Projects\BookStoreCursova\КурсоваБД\obj\Release\КурсоваБД.Managment.resources
+C:\My documents\Visual Studio 2012\Projects\BookStoreCursova\КурсоваБД\obj\Release\КурсоваБД.Start.resources
+C:\My documents\Visual Studio 2012\Projects\BookStoreCursova\КурсоваБД\obj\Release\КурсоваБД.Question.resources

@@ -25,10 +25,35 @@ namespace КурсоваБД
             timer1.Start();
 
             password.PasswordChar = '*';
-        }
-  
-        
 
+            comboAllWorker();
+        }
+
+
+        void comboAllWorker() //all jenres to combobox
+        {
+            string s1 = "datasource=localhost;port=3306;username=root;password=ttt";
+            string s2 = "select workername from bookstore.worker;";
+            MySqlConnection connn = new MySqlConnection(s1);
+            MySqlCommand c = new MySqlCommand(s2, connn);
+            MySqlDataReader myreader;
+            try
+            {
+                connn.Open();
+                myreader = c.ExecuteReader();
+                while (myreader.Read())
+                {
+                    string s4 = myreader.GetString("workername");
+                    comboBox6.Items.Add(s4);
+                    comboBox5.Items.Add(s4);
+                    comboBox4.Items.Add(s4);
+                }
+            }
+            catch (Exception e)
+            {
+                connn.Close();
+            }
+        }
         
         
         
@@ -107,6 +132,11 @@ namespace КурсоваБД
               + comboBox6.Text.ToString() + "','" + comboBox5.Text.ToString() + "','" + comboBox4.Text.ToString() + "','" +
               dateTimePicker4.Text + "','" + dateTimePicker3.Text + "');";
             Func.AddFunc(query11);
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

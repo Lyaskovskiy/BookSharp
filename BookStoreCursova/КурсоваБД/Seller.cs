@@ -156,8 +156,8 @@ namespace КурсоваБД
         private void button1_Click(object sender, EventArgs e)
         {
            
-            string queryBook = "insert into bookstore.book(namebook,jenre,price,image,discountdate) values ('"
-                + comboBox1.Text.ToString() + "','" + textBox2.Text.ToString() + "','" + textBox3.Text.ToString() + "',@IMG, '" + dateTimePicker1.Text + "');";
+            string queryBook = "insert into bookstore.book(namebook,jenre,price,description,image,discount,discountdate) values ('"
+                + comboBox1.Text.ToString() + "','" + textBox2.Text.ToString() + "','" + textBox3.Text.ToString() + "','" + richTextBox1.Text.ToString() + "',@IMG, '" + textBox1.Text.ToString() + "','" + dateTimePicker1.Text + "');";
             Func.ImageFunc(queryBook, label3.Text.ToString());
       
 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,12 +49,27 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.реєстраціяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.реєстраціяToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вхідToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.проНасToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.менюToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.адміністраторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.менеджментПродажівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.реєстраціяКнигиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.зворотнійЗвязокЗКлієтомToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +86,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(314, 16);
+            this.button1.Location = new System.Drawing.Point(314, 30);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 25);
@@ -117,21 +132,22 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.ColumnHeadersVisible = false;
             this.dataGridView2.Location = new System.Drawing.Point(13, 160);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.Size = new System.Drawing.Size(337, 112);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 16);
+            this.textBox1.Location = new System.Drawing.Point(13, 30);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(293, 25);
@@ -140,7 +156,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(409, 16);
+            this.button4.Location = new System.Drawing.Point(409, 30);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(112, 25);
@@ -154,7 +170,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(770, 16);
+            this.label1.Location = new System.Drawing.Point(688, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -166,7 +182,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(589, 16);
+            this.label2.Location = new System.Drawing.Point(551, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -179,17 +195,19 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.LimeGreen;
-            this.linkLabel1.Location = new System.Drawing.Point(643, 16);
+            this.linkLabel1.Location = new System.Drawing.Point(575, 33);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(110, 18);
             this.linkLabel1.TabIndex = 21;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Реєстрація/Вхід";
+            this.linkLabel1.Visible = false;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(12, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 18);
@@ -199,7 +217,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Modern No. 20", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(269, 275);
+            this.button2.Location = new System.Drawing.Point(279, 275);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 20);
             this.button2.TabIndex = 24;
@@ -234,7 +252,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(396, 257);
+            this.button5.Location = new System.Drawing.Point(393, 257);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(33, 22);
             this.button5.TabIndex = 27;
@@ -244,7 +262,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(357, 257);
+            this.button6.Location = new System.Drawing.Point(354, 257);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(33, 22);
             this.button6.TabIndex = 28;
@@ -255,7 +273,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Modern No. 20", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(646, 275);
+            this.button7.Location = new System.Drawing.Point(614, 275);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(71, 20);
             this.button7.TabIndex = 29;
@@ -267,6 +285,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(643, 243);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -289,21 +308,10 @@
             this.label8.Text = "0";
             this.label8.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(646, 71);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 168);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Modern No. 20", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(723, 275);
+            this.button8.Location = new System.Drawing.Point(691, 275);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(71, 20);
             this.button8.TabIndex = 32;
@@ -315,7 +323,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(643, 261);
+            this.label9.Location = new System.Drawing.Point(515, 243);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 18);
             this.label9.TabIndex = 33;
@@ -325,18 +333,155 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(740, 259);
+            this.label10.Location = new System.Drawing.Point(520, 259);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 18);
             this.label10.TabIndex = 34;
+            this.label10.Visible = false;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(518, 61);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(264, 242);
+            this.webBrowser1.TabIndex = 35;
+            this.webBrowser1.Visible = false;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(14, 53);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(291, 51);
+            this.richTextBox1.TabIndex = 36;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.Visible = false;
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(524, 206);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label11.Size = new System.Drawing.Size(46, 18);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Опис:";
+            this.label11.Visible = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.менюToolStripMenuItem,
+            this.реєстраціяToolStripMenuItem,
+            this.проНасToolStripMenuItem,
+            this.менюToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(792, 24);
+            this.menuStrip1.TabIndex = 38;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // менюToolStripMenuItem
+            // 
+            this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
+            this.менюToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.менюToolStripMenuItem.Text = "Задати питання";
+            this.менюToolStripMenuItem.Click += new System.EventHandler(this.менюToolStripMenuItem_Click);
+            // 
+            // реєстраціяToolStripMenuItem
+            // 
+            this.реєстраціяToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.реєстраціяToolStripMenuItem1,
+            this.вхідToolStripMenuItem1});
+            this.реєстраціяToolStripMenuItem.Name = "реєстраціяToolStripMenuItem";
+            this.реєстраціяToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.реєстраціяToolStripMenuItem.Text = "Реєстрація/Вхід";
+            this.реєстраціяToolStripMenuItem.Click += new System.EventHandler(this.реєстраціяToolStripMenuItem_Click);
+            // 
+            // реєстраціяToolStripMenuItem1
+            // 
+            this.реєстраціяToolStripMenuItem1.Name = "реєстраціяToolStripMenuItem1";
+            this.реєстраціяToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.реєстраціяToolStripMenuItem1.Text = "Реєстрація";
+            this.реєстраціяToolStripMenuItem1.Click += new System.EventHandler(this.реєстраціяToolStripMenuItem1_Click);
+            // 
+            // вхідToolStripMenuItem1
+            // 
+            this.вхідToolStripMenuItem1.Name = "вхідToolStripMenuItem1";
+            this.вхідToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.вхідToolStripMenuItem1.Text = "Вхід";
+            this.вхідToolStripMenuItem1.Click += new System.EventHandler(this.вхідToolStripMenuItem1_Click);
+            // 
+            // проНасToolStripMenuItem
+            // 
+            this.проНасToolStripMenuItem.Name = "проНасToolStripMenuItem";
+            this.проНасToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.проНасToolStripMenuItem.Text = "Про нас";
+            // 
+            // менюToolStripMenuItem1
+            // 
+            this.менюToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.адміністраторToolStripMenuItem,
+            this.менеджментПродажівToolStripMenuItem,
+            this.реєстраціяКнигиToolStripMenuItem,
+            this.зворотнійЗвязокЗКлієтомToolStripMenuItem});
+            this.менюToolStripMenuItem1.Name = "менюToolStripMenuItem1";
+            this.менюToolStripMenuItem1.Size = new System.Drawing.Size(53, 20);
+            this.менюToolStripMenuItem1.Text = "Меню";
+            this.менюToolStripMenuItem1.Visible = false;
+            this.менюToolStripMenuItem1.Click += new System.EventHandler(this.менюToolStripMenuItem1_Click);
+            // 
+            // адміністраторToolStripMenuItem
+            // 
+            this.адміністраторToolStripMenuItem.Name = "адміністраторToolStripMenuItem";
+            this.адміністраторToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.адміністраторToolStripMenuItem.Text = "Адміністратор";
+            this.адміністраторToolStripMenuItem.Click += new System.EventHandler(this.адміністраторToolStripMenuItem_Click);
+            // 
+            // менеджментПродажівToolStripMenuItem
+            // 
+            this.менеджментПродажівToolStripMenuItem.Name = "менеджментПродажівToolStripMenuItem";
+            this.менеджментПродажівToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.менеджментПродажівToolStripMenuItem.Text = "Менеджмент продажів";
+            this.менеджментПродажівToolStripMenuItem.Click += new System.EventHandler(this.менеджментПродажівToolStripMenuItem_Click);
+            // 
+            // реєстраціяКнигиToolStripMenuItem
+            // 
+            this.реєстраціяКнигиToolStripMenuItem.Name = "реєстраціяКнигиToolStripMenuItem";
+            this.реєстраціяКнигиToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.реєстраціяКнигиToolStripMenuItem.Text = "Реєстрація книги";
+            this.реєстраціяКнигиToolStripMenuItem.Click += new System.EventHandler(this.реєстраціяКнигиToolStripMenuItem_Click);
+            // 
+            // зворотнійЗвязокЗКлієтомToolStripMenuItem
+            // 
+            this.зворотнійЗвязокЗКлієтомToolStripMenuItem.Name = "зворотнійЗвязокЗКлієтомToolStripMenuItem";
+            this.зворотнійЗвязокЗКлієтомToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.зворотнійЗвязокЗКлієтомToolStripMenuItem.Text = "Зворотній зв\'язок з клієтом";
+            this.зворотнійЗвязокЗКлієтомToolStripMenuItem.Click += new System.EventHandler(this.зворотнійЗвязокЗКлієтомToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(380, 63);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(141, 187);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Guest
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(835, 307);
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.ClientSize = new System.Drawing.Size(792, 315);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button8);
@@ -361,17 +506,21 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.Control;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Guest";
             this.Text = "Ласкаво просимо в Книгарню";
             this.Load += new System.EventHandler(this.Guest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -404,5 +553,19 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem менюToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem реєстраціяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem реєстраціяToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem вхідToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem проНасToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem менюToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem адміністраторToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem менеджментПродажівToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem реєстраціяКнигиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem зворотнійЗвязокЗКлієтомToolStripMenuItem;
     }
 }

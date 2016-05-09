@@ -126,7 +126,7 @@ namespace КурсоваБД
                 while (myreader.Read())
                 {
                     string s3 = myreader.GetString("authorname").ToString();
-                    label3.Text += " " + s3 + ", ";
+                    label3.Text += " " + s3 + ".";
                 }
             }
             catch (Exception e)
@@ -137,6 +137,7 @@ namespace КурсоваБД
 
         void comboDate(string source) //discountdate for book
         {
+            label10.Text = "";
             string s1 = "datasource=localhost;port=3306;username=root;password=ttt";
             string s2 = "select discountdate from bookstore.book where namebook = '" + source + "' and discountdate is not null;";
             MySqlConnection connn = new MySqlConnection(s1);
@@ -149,7 +150,7 @@ namespace КурсоваБД
                 while (myreader.Read())
                 {
                     string s4 = myreader.GetString("discountdate").ToString();
-                    label10.Text += " " + s4;
+                    label10.Text = " " + s4;
                    
                 }
             }
@@ -164,7 +165,7 @@ namespace КурсоваБД
         void comboJenre(string source) //jenre to label when book is clicked
         {
             string s1 = "datasource=localhost;port=3306;username=root;password=ttt";
-            string s2 = "select price-price*discount/100,jenre from bookstore.book where namebook = '" + source + "';";
+            string s2 = "select price-price*discount/100,jenre,description from bookstore.book where namebook = '" + source + "';";
             MySqlConnection connn = new MySqlConnection(s1);
             MySqlCommand c = new MySqlCommand(s2, connn);
             MySqlDataReader myreader;
@@ -178,6 +179,8 @@ namespace КурсоваБД
                     label4.Text += " " + s4;
                     int s5 = myreader.GetInt32("price-price*discount/100");
                     label5.Text += " " + s5;
+                    string s6 = myreader.GetString("description").ToString();
+                    label11.Text = " " + s6;
                 }
             }
             catch (Exception e)
@@ -189,8 +192,8 @@ namespace КурсоваБД
         private void Guest_Load(object sender, EventArgs e)
         {
             comboWho();
-            if (label2.Text.ToString() == "admin" || label2.Text.ToString() == "user" || label2.Text.ToString() == "saler") {button4.Visible = true; button2.Visible = true; button5.Visible = true; button6.Visible = true;}
-            else { button4.Visible = false; button2.Visible = false; button5.Visible = false; button6.Visible = false;}
+            if (label2.Text.ToString() == "admin" || label2.Text.ToString() == "manager" || label2.Text.ToString() == "seller") { менюToolStripMenuItem1.Visible = true; button4.Visible = true; button2.Visible = true; button5.Visible = true; button6.Visible = true; }
+            else { button4.Visible = false; button2.Visible = true; button5.Visible = true; button6.Visible = true;}
 
 
             //all books to datagrid
@@ -220,9 +223,17 @@ namespace КурсоваБД
             label5.Text = "";
             comboAuthors(textBox1.Text.ToString());
             comboJenre(textBox1.Text.ToString());
-            label3.Visible = true;
-            label4.Visible = true;
-            label5.Visible = true;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            webBrowser1.Visible = true;
+
+            richTextBox1.Text = "<html><font size='5' color='green'>Автор/Автори: " + label3.Text.ToString() + "</font><br>" +
+                                "<font size='4' color='black'>Жанр: " + label4.Text.ToString() + "</font><br><br><br>" +
+                                "<font size='3' color='black'>Опис: " + label11.Text.ToString() + "</font><br><br><br>" +
+                                "<font size='4' color='red'>Ціна із знижкою: " + label5.Text.ToString() + "</font><br>" +
+                                "<font size='3' color='black'>Дата закінчення знижки: " + label10.Text.ToString() + "</font><br></html>";
+            webBrowser1.DocumentText = richTextBox1.Text;
         }
 
         //all books to datagrid by jenre
@@ -257,9 +268,18 @@ namespace КурсоваБД
             comboJenre(dataGridView2.CurrentRow.Cells[0].Value.ToString());
             comboImage(dataGridView2.CurrentRow.Cells[0].Value.ToString());
             comboDate(dataGridView2.CurrentRow.Cells[0].Value.ToString());
-            label3.Visible = true;
-            label4.Visible = true;
-            label5.Visible = true;
+          //  label3.Visible = true;
+           // label4.Visible = true;
+           // label5.Visible = true;
+           // label11.Visible = true;
+            webBrowser1.Visible = true;
+
+            richTextBox1.Text = "<html><font size='5' color='green'>Автор/Автори: "+label3.Text.ToString()+"</font><br>"+
+                                "<font size='4' color='black'>Жанр: "+label4.Text.ToString()+"</font><br><br><br>"+
+                                "<font size='3' color='black'>Опис: " + label11.Text.ToString() + "</font><br><br><br>" +
+                                "<font size='4' color='red'>Ціна із знижкою: " + label5.Text.ToString() + "</font><br>" +
+                                "<font size='3' color='black'>Дата закінчення знижки: "+label10.Text.ToString()+"</font><br></html>";
+            webBrowser1.DocumentText = richTextBox1.Text;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -347,7 +367,8 @@ namespace КурсоваБД
             button8.Visible = true;
             label7.Visible = true;
             label8.Visible = true;
-            label9.Visible = true;
+           // label9.Visible = true;
+            webBrowser1.Visible = false;
 
 
             comboPrice();
@@ -362,9 +383,9 @@ namespace КурсоваБД
             button3.Enabled = true;
             textBox1.Enabled = true;
 
-            label3.Visible = true;
-            label4.Visible = true;
-            label5.Visible = true;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
             pictureBox1.Visible = true;
             
             dataGridView1.Visible = false;
@@ -373,6 +394,7 @@ namespace КурсоваБД
             label7.Visible = false;
             label8.Visible = false;
             label9.Visible = false;
+            webBrowser1.Visible = true;
         }
 
         private void button7_Click(object sender, EventArgs e) //видалити з кошика + обрахувати нову вартість
@@ -406,6 +428,63 @@ namespace КурсоваБД
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void реєстраціяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void реєстраціяToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NewUser f3 = new NewUser("");
+            f3.ShowDialog();
+        }
+
+        private void вхідToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Login f1 = new Login();
+            f1.ShowDialog();
+        }
+
+        private void менюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void адміністраторToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Administrator f3 = new Administrator();
+            f3.ShowDialog();
+        }
+
+        private void менеджментПродажівToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Managment f1 = new Managment();
+            f1.ShowDialog();
+        }
+
+        private void реєстраціяКнигиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Seller f3 = new Seller();
+            f3.ShowDialog();
+        }
+
+        private void зворотнійЗвязокЗКлієтомToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Talking f2 = new Talking();
+            f2.ShowDialog();
+        }
+
+        private void менюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Question f2 = new Question();
+            f2.ShowDialog();
         }
 
        
