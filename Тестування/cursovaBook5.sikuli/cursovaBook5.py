@@ -1,0 +1,8 @@
+click("1462797499214.png")
+click("1462797560426.png")
+click("1462797712479.png")
+doubleClick("1462797766770.png")
+type("1462797775764.png", "manager")
+click("1462797795871.png")
+click("1462797822588.png")
+click("1462797828611.png")
